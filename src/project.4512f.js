@@ -3650,7 +3650,12 @@ window.__require = function e(t, i, n) {
                 gl.emitter.on("event_showHorseRace", this.initHorseRace, this),
                 this.loadGameScene(),
                 this.loadGameScene(),
-                this.initAudio()
+                this.initAudio();
+				
+				//埋点 需要改造成 更多好玩
+				var btn_interesting = cc.find("btn_interesting", this.node);
+				btn_interesting.active = 0;
+				console.log(this.node);
             },
             initData: function() {
                 gl.readJSON("jdqsData").then(function(e) {
